@@ -22,6 +22,7 @@
     transform: rotateX(0) rotateY(0);
     transition: transform 1s ease;
     border-radius: 15;
+    transition: transform 0.1s ease-out;
   }
   
   .face {
@@ -43,13 +44,7 @@
     display: flex;
   }
   
-  .front  { transform: rotateY(0deg) translateZ(50px); }
-  .back   { transform: rotateY(180deg) translateZ(50px); }
-  .left   { transform: rotateY(-90deg) translateZ(50px); }
-  .right  { transform: rotateY(90deg) translateZ(50px); }
-  .top    { transform: rotateX(90deg) translateZ(50px); }
-  .bottom { transform: rotateX(-90deg) translateZ(50px); }
-  
+
   .dot {
     width: 15px;
     height: 15px;
@@ -139,33 +134,33 @@
 
 .six .dot:nth-child(1) {
     top: 25%;
-    left: 20%;
+    left: 25%;
   }
   
   .six .dot:nth-child(2) {
     top: 50%;
-    left: 20%;
+    left: 25%;
     transform: translateY(-50%);
   }
   
   .six .dot:nth-child(3) {
     bottom: 25%;
-    left: 20%;
+    left: 25%;
   }
   
   .six .dot:nth-child(4) {
     top: 25%;
-    right: 20%;
+    right: 25%;
   }
   
   .six .dot:nth-child(5) {
     top: 50%;
-    right: 20%;
+    right: 25%;
     transform: translateY(-50%);
   }
   
   .six .dot:nth-child(6) {
     bottom: 25%;
-    right: 20%;
+    right: 25%;
   }
   

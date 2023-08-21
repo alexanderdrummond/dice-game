@@ -5,10 +5,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     color: white;
     
     border-radius: 10px;
+
+    .flyingSvg {
+        position: absolute;
+        width: 50px; 
+        opacity: 1;
+        pointer-events: none;  
+        animation: flyAndFade 2s forwards;
+    
+        &.direction1 {
+            animation-name: flyAndFade1;
+        }
+    
+        &.direction2 {
+            animation-name: flyAndFade2;
+        }
+
+        &.direction3 {
+            animation-name: flyAndFade3;
+        }
+
+        @keyframes flyAndFade1 {
+            100% {
+                transform: translate(100px, 50px);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes flyAndFade2 {
+            100% {
+                transform: translate(-100px, 50px);
+                opacity: 0;
+            }
+
+            
+        }
+
+        @keyframes flyAndFade3 {
+            100% {
+                transform: translate(0px, -100px);
+                opacity: 0;
+            }
+        }
+        
+    
+        
+    }
 
   
     h2 {
@@ -38,4 +85,8 @@
     }
     
   }
-  
+
+  .disabledButton {
+    background-color: grey;
+    cursor: not-allowed;
+}
