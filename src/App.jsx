@@ -112,13 +112,17 @@ const overlayStyle = {
   zIndex: 1000, 
 };
 
+const switchSvg = (
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M42 19H6M30 7l12 12M6.799 29h36m-36 0l12 12"/></svg>
+);
 
 return (
   <div className={styles.appcon}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1>Dice Game</h1>
       <button className="controls" onClick={() => setGameMode(prevMode => (prevMode === 'PvC' ? 'PvP' : 'PvC'))} >
-        {gameMode === 'PvC' ? "Player vs Player" : "Player vs Computer"}
+      {switchSvg} {gameMode === 'PvC' ?  "Player vs Player" : "Player vs Computer"}
       </button>
     </div>
 
