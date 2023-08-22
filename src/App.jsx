@@ -117,7 +117,7 @@ return (
   <div className={styles.appcon}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1>Dice Game</h1>
-      <button className="controls" onClick={() => setGameMode(prevMode => (prevMode === 'PvC' ? 'PvP' : 'PvC'))}>
+      <button className="controls" onClick={() => setGameMode(prevMode => (prevMode === 'PvC' ? 'PvP' : 'PvC'))} >
         {gameMode === 'PvC' ? "Player vs Player" : "Player vs Computer"}
       </button>
     </div>
