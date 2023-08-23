@@ -20,14 +20,17 @@
     
         &.direction1 {
             animation-name: flyAndFade1;
+            animation-delay: 0s;
         }
     
         &.direction2 {
             animation-name: flyAndFade2;
+            animation-delay: 0.2s;
         }
 
         &.direction3 {
             animation-name: flyAndFade3;
+            animation-delay: 0.4s;
         }
 
         @keyframes flyAndFade1 {
