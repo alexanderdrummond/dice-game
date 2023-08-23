@@ -1,5 +1,9 @@
 
-
+.controlwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .overlayz {
     position: fixed;
     top: 0;
@@ -42,6 +46,7 @@
     
       padding: 10px 20px;
       margin-bottom: 20px;
+      margin-right: 10px;
       font-size: 1rem;
       color: #fff;
       background-color: #429ffd;

@@ -52,13 +52,13 @@ function GameArea() {
       if (!isComputer) {
         const updatedPlayerScore = playerScore + roll;
         setPlayerScore(updatedPlayerScore);
-        if (updatedPlayerScore >= 100) {
+        if (updatedPlayerScore >= 50) {
           setWinner('Player');
         }
       } else {
         const updatedComputerScore = computerScore + roll;
         setComputerScore(updatedComputerScore);
-        if (updatedComputerScore >= 100) {
+        if (updatedComputerScore >= 50) {
           setWinner('Computer');
         }
       }
@@ -70,7 +70,7 @@ function GameArea() {
       if (playerTurn === 1) {
         const updatedPlayerScore = playerScore + roll;
         setPlayerScore(updatedPlayerScore);
-        if (updatedPlayerScore >= 100) {
+        if (updatedPlayerScore >= 50) {
           setWinner('Player 1');
         }
       } else {
@@ -96,17 +96,19 @@ function GameArea() {
     setWinner(null);
     setPlayerTurn(1);
   };
+  
   return (
     <div className={styles.appcon}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h1>Dice Game</h1>
+        <div className={styles.controlwrap}>
         <button className={styles.controls} onClick={() => {
           setGameMode(prevMode => (prevMode === 'PvC' ? 'PvP' : 'PvC'));
           resetGame(); 
         }}>
           {gameMode === 'PvC' ? "Player vs Player" : "Player vs Computer"}
         </button>
-        <button className={styles.controls} onClick={resetGame}>Reset game</button>
+        <button className={styles.controls} onClick={resetGame}>Reset game</button></div>
       </div>
       <div className={styles.gameArea}>
         {gameMode === 'PvC' ? (

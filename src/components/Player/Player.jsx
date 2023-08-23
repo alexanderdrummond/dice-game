@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styles from './Player.module.scss';
 import PropTypes from 'prop-types';
 
+// ignore, eslint being eslint
+
 Player.propTypes = {
   name: PropTypes.string.isRequired,
   rollValue: PropTypes.number.isRequired,
