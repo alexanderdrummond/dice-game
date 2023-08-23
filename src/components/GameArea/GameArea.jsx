@@ -100,6 +100,7 @@ function GameArea() {
   return (
     <div className={styles.appcon}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h1>Dice Game</h1>
         <div className={styles.controlwrap}>
         <button className={styles.controls} onClick={() => {
           setGameMode(prevMode => (prevMode === 'PvC' ? 'PvP' : 'PvC'));
